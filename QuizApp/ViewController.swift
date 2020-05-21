@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         if let question = currentQuestion {
             let choices = question.getChoices()
             
-            questionField.text = question.getInterrogative()
+            questionField.text = question.getText()
             firstChoiceButton.setTitle(choices[0], for: .normal)
             secondChoiceButton.setTitle(choices[1], for: .normal)
             thirdChoiceButton.setTitle(choices[2], for: .normal)
