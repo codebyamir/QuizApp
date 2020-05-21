@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     var questions = QuestionModel()
     let score = ScoreModel()
     
-    let numberOfQuestionPerRound = 5
+    let numberOfQuestionPerRound = 25
     var currentQuestion: Question? = nil
 
     var gameStartSound: SystemSoundID = 0
