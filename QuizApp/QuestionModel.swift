@@ -11,16 +11,9 @@ import GameKit
 struct QuestionModel {
     
     let questions = [
-        Question(interrogative: "This was the only US President to serve more than two consecutive terms.", answers: ["George Washington", "Franklin D. Roosevelt", "Woodrow Wilson", "Andrew Jackson"], correctAnswerIndex: 1),
-        Question(interrogative: "Which of the following countries has the most residents?", answers: ["Nigeria", "Russia", "Iran", "Vietnam"], correctAnswerIndex: 0),
-        Question(interrogative: "In what year was the United Nations founded?", answers: ["1918", "1919", "1945", "1954"], correctAnswerIndex: 2),
-        Question(interrogative: "The Titanic departed from the United Kingdom, where was it supposed to arrive?", answers: ["Paris", "Washington D.C.", "New York City", "Boston"], correctAnswerIndex: 2),
-        Question(interrogative: "Which nation produces the most oil?", answers: ["Iran", "Iraq", "Brazil", "Canada"], correctAnswerIndex: 3),
-        Question(interrogative: "Which country has most recently won consecutive World Cups in Soccer?", answers: ["Italy", "Brazil", "Argetina", "Spain"], correctAnswerIndex: 1),
-        Question(interrogative: "Which city is the oldest?", answers: ["Mexico City", "Cape Town", "San Juan", "Sydney"], correctAnswerIndex: 0),
-        Question(interrogative: "Which country was the first to allow women to vote in national elections?", answers: ["Poland", "United States", "Sweden", "Senegal"], correctAnswerIndex: 0),
-        Question(interrogative: "Which of the following rivers is longest?", answers: ["Yangtze", "Mississippi", "Congo", "Mekong"], correctAnswerIndex: 1),
-        Question(interrogative: "Which of these countries won the most medals in the 2012 Summer Games?", answers: ["France", "Germany", "Japan", "Great Britian"], correctAnswerIndex: 3)
+        Question(interrogative: "A bean instance in this scope lives within the lifetime of a single HTTP Session.", answers: ["global session","request","session","application"], correctAnswerIndex: 2),
+        Question(interrogative: "Its advantages include:  faster development, lesser repetitive SQL code, and less if any at all need to deal with vendor-specific SQL and database issues.  Its disadvantages include:  a little more initial learning curve needed, and can be a little slower than SQL queries when it comes to complex queries.", answers: ["AOP", "JDBC", "OXM", "ORM"], correctAnswerIndex: 3),
+        Question(interrogative: "In Spring Boot, if the HSQLDB jar dependencies are on the classpath, and no database connection bean has been manually configured, what will happen?", answers: ["Spring Boot will auto-configure an in-memory database.", "An exception will be thrown.","No auto-configuration will be done for HSQLDB.","None of the above"], correctAnswerIndex: 0),
     ]
     
     var previouslyUsedNumbers: [Int] = []

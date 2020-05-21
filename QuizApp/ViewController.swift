@@ -81,11 +81,11 @@ class ViewController: UIViewController {
             
             if (question.validateAnswer(to: answer)) {
                 score.incrementCorrectAnswers()
-                feedbackField.textColor = UIColor(red:0.15, green:0.61, blue:0.61, alpha:1.0)
+                feedbackField.textColor = UIColor.green
                 feedbackField.text = "Correct!"
             } else {
                 score.incrementIncorrectAnswers()
-                feedbackField.textColor = UIColor(red:0.82, green:0.40, blue:0.26, alpha:1.0)
+                feedbackField.textColor = UIColor.red
                 feedbackField.text = "Sorry, that's not it."
             }
             firstChoiceButton.isEnabled = false

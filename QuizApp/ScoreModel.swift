@@ -31,14 +31,12 @@ class ScoreModel {
     }
     
     func getScore() -> String {
-        let percentaile = Double(correctAnswers) / Double(getQuestionsAsked())
+        let percentile = Double(correctAnswers) / Double(getQuestionsAsked()) * 100
         
-        if (percentaile > 0.75) {
-            return "Way to go!\n You got \(correctAnswers) out of \(getQuestionsAsked()) correct answers!"
-        } else if (percentaile > 0.5) {
-            return "Nice job!\n You got \(correctAnswers) out of \(getQuestionsAsked()) correct answers!"
+        if (percentile > 75) {
+            return "Way to go!\n You got \(correctAnswers) out of \(getQuestionsAsked()) correct answers! \n \(percentile)%"
         } else {
-            return "You can do better.\n You got \(correctAnswers) out of \(getQuestionsAsked()) correct answers!"
+            return "You can do better.\n You got \(correctAnswers) out of \(getQuestionsAsked()) correct answers.\n \(percentile)%"
         }
     }
 }
