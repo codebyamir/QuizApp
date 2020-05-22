@@ -30,8 +30,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadGameStartSound()
-        playGameStartSound()
+//        loadGameStartSound()
+//        playGameStartSound()
         displayQuestion()
     }
     
@@ -109,7 +109,7 @@ class ViewController: UIViewController {
     func displayScore() {
         questionField.text = score.getScore()
         score.reset()
-        nextQuestionButton.setTitle("Play again", for: .normal)
+        nextQuestionButton.setTitle("Start New Exam", for: .normal)
         
         feedbackField.isHidden = true
         firstChoiceButton.isHidden = true
