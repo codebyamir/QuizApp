@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var thirdChoiceButton: UIButton!
     @IBOutlet weak var fourthChoiceButton: UIButton!
     @IBOutlet weak var nextQuestionButton: UIButton!
+    @IBOutlet weak var questionNumber: UILabel!
     
     var questions = QuestionModel()
     let score = ScoreModel()
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 //        loadGameStartSound()
 //        playGameStartSound()
+        displayStart()
         displayQuestion()
     }
     
@@ -43,7 +45,13 @@ class ViewController: UIViewController {
         return score.getQuestionsAsked() >= numberOfQuestionPerRound
     }
     
+    func displayStart() {
+        
+    }
+    
     func displayQuestion() {
+        questionNumber.text = "Question " + String(score.getQuestionsAsked() + 1)
+        
         currentQuestion = questions.getRandomQuestion()
         
         if let question = currentQuestion {
@@ -108,6 +116,8 @@ class ViewController: UIViewController {
     
     func displayScore() {
         questionField.text = score.getScore()
+        questionNumber.text = nil
+        
         score.reset()
         nextQuestionButton.setTitle("Start New Exam", for: .normal)
         

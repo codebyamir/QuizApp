@@ -27,7 +27,7 @@ struct QuestionModel {
             "Spring Boot will auto-configure an in-memory database.":true,
             "An exception will be thrown.":false,
             "No auto-configuration will be done for HSQLDB.":false,
-            "None of the above":false]),
+            "None of these":false]),
         
         Question(text: "The presence of this annotation informs Spring Boot that it should take an opinionated approach to configuring the application.", answers: [
             "@EnableAutoConfiguration":true,
@@ -53,17 +53,37 @@ struct QuestionModel {
             "403":true,
             "503":false]),
         
-        Question(text: "REST is a simpler alternative to SOAP and WSDL-based Web services.  What does REST stand for?", answers: ["Representational State Transfer":true, "Representational Entity State Transformation":false, "Relational State Transfer":false, "Relational Entity State Transformation":false]),
+        Question(text: "REST is a simpler alternative to SOAP and WSDL-based Web services.  What does REST stand for?", answers: [
+            "Representational State Transfer":true,
+            "Representational Entity State Transformation":false,
+            "Relational State Transfer":false,
+            "Relational Entity State Transformation":false]),
         
-        Question(text: "In REST services, what does CRUD mean?", answers: ["central, representational, uniform, delivery":false, "create, read, update, delete":true, "component, resource, unified, data":false,"component, representational, unified, dataQuestion":false]),
+        Question(text: "In REST services, what does CRUD mean?", answers: [
+            "central, representational, uniform, delivery":false,
+            "create, read, update, delete":true,
+            "component, resource, unified, data":false,
+            "component, representational, unified, dataQuestion":false]),
         
-        Question(text: "To enhance security when working with REST, the 'requires-channel' attribute of the '<intercept-url>' element can be set to this value to enforce HTTPS channel security", answers: ["ssl":false, "https":true, "tls/ssl":false, "tls/https":false]),
+        Question(text: "To enhance security when working with REST, the 'requires-channel' attribute of the '<intercept-url>' element can be set to this value to enforce HTTPS channel security", answers: [
+            "ssl":false,
+            "https":true,
+            "tls/ssl":false,
+            "tls/https":false]),
         
-        Question(text: "Which of these is a method used in customizing bean lifecycles, and is found inside the DisposableBean interface?", answers: ["postConstruct()":false, "afterPropertiesSet()":false, "destroy()":true, "onInit()":true]),
+        Question(text: "Which of these is a method used in customizing bean lifecycles, and is found inside the DisposableBean interface?", answers: [
+            "postConstruct()":false,
+            "afterPropertiesSet()":false,
+            "destroy()":true,
+            "onInit()":true]),
         
         Question(text: "Which of these is a valid way of configuring the ContextLoaderListener?", answers: ["<servlet-class>org.springframework.web.context.ContextLoaderListener</servlet-class>":false,"<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>":true,"<param-name>org.springframework.web.context.ContextLoaderListener</param-name>":false,"<bean name=\"root\" class=\"org.springframework.web.context.ContextLoaderListener\">":false]),
         
-        Question(text: "Which one is true about lazy initialization of beans?", answers: ["When a lazy-initialized bean A is a dependency of non-lazy-initialized singleton bean B, bean A will still be lazy-initialized.":false,"Singleton-scoped beans, by default, are lazy-initialized.":false,"Prototype-scoped beans, by default, are lazy-initialized.":true, "All of the above.":false]),
+        Question(text: "Which one is true about lazy initialization of beans?", answers: [
+            "When a lazy-initialized bean A is a dependency of non-lazy-initialized singleton bean B, bean A will still be lazy-initialized.":false,
+            "Singleton-scoped beans, by default, are lazy-initialized.":false,
+            "Prototype-scoped beans, by default, are lazy-initialized.":true,
+            "All of these":false]),
         
         Question(text: "The 'Autowired' annotation can be applied to the following:", answers: [
             "constructors":false,
@@ -71,7 +91,11 @@ struct QuestionModel {
             "fields, setters and getters":false,
             "fields, constructors, methods":true]),
         
-        Question(text: "It enables the modularization of concerns that cut across multiple types and objects.", answers: ["Model-View-Controller (MVC)":false, "Object-Oriented Programming (OOP)":false, "Aspect-Oriented Programming (AOP)":true, "Spring Framework":false]),
+        Question(text: "It enables the modularization of concerns that cut across multiple types and objects.", answers: [
+            "Model-View-Controller (MVC)":false,
+            "Object-Oriented Programming (OOP)":false,
+            "Aspect-Oriented Programming (AOP)":true,
+            "Spring Framework":false]),
         
         Question(text: "In Spring AOP, different types of this include \"around\", \"before\", and \"after\".", answers: [
             "Aspect":false,
@@ -89,7 +113,7 @@ struct QuestionModel {
             "SingleConnectionDataSource":true,
             "DriverManagerDataSource":false,
             "SmartDataSource":false,
-            "None of the above":false]),
+            "None of these":false]),
         
         Question(text: "Which one is the highest database system isolation level?", answers: [
             "Read committed":false,
@@ -149,7 +173,7 @@ struct QuestionModel {
             "spring-boot-starter-rest":false,
             "spring-boot-starter-web-rest":false,
             "spring-boot-starter-mvc-rest":false,
-            "None of the above":true]),
+            "spring-boot-starter-web":true]),
         
         Question(text: "Which of these is the root of the hierarchy of Spring data access exceptions?", answers: [
             "AbstractException":false,
@@ -161,7 +185,7 @@ struct QuestionModel {
             "@WebController":false,
             "@WebComponent":false,
             "@Web":false,
-            "None of the above":true]),
+            "@Controller":true]),
         
         Question(text:
 """
@@ -225,7 +249,7 @@ Which of these can be added after the code below to assist in the definition?
         Question(text: "A bean annotated with 'Session' scope is created:", answers: ["Each time the bean is referenced":false,
                                                                                       "Once per user session":true,
                                                                                       "Once per request":false,
-                                                                                      "All of the above":false]),
+                                                                                      "All of these":false]),
         
         Question(text: "Which is the best practice?", answers: [
             "@ComponentScan({\"org\",\"com\"})":false,
@@ -237,7 +261,7 @@ Which of these can be added after the code below to assist in the definition?
             "Spring beans are managed by the Spring IoC container":false,
             "Spring beans are instantiated, assembled, and otherwise managed by a Spring IoC container":false,
             "Spring beans are simple POJOs":false,
-            "All of the above":true]),
+            "All of these":true]),
         
         Question(text: "How can you configured a bean to be lazily initialized?", answers: [
             "@Scope(\"Lazy\")":false,
@@ -334,7 +358,274 @@ Which of these can be added after the code below to assist in the definition?
             "@Profile":true,
             "@BeanProfile":false,
             "@Config":false]),
+        
+        Question(text: "This AOP advice can choose not to proceed to the join point and return its own return value.", answers: [
+                  "Before advice":false,
+                  "Around advice":true,
+                  "After throwing advice":false,
+                  "After returning advice":false]),
+    
+        Question(text: "Which of these is an XML tag in Spring Security that allows access to the current Authentication object stored in the security context?", answers: [
+                         "accesscontrollist":false,
+                         "authenticate":false,
+                         "authentication":true,
+                         "authorize":false]),
+    
+        Question(text:
+"""
+What does this code below return?
 
+return this.jdbcTemplate.queryForObject("select name from Account where name like ?",
+, new Object[]{"JOHN%"}, new RowMapper<Account>() {
+  public Account mapRow(ResultSet rs, int rowNum) throws SQLException {
+    return new Account(rs.getString("name"));
+  }
+}
+);
+"""
+        , answers: [
+        "A List<Account> object.":false,
+        "An Account object":true,
+        "An Account[] object":false,
+        "A RowMapper<Account> object":false]),
+        
+        Question(text: "Which of these is true regarding Spring Boot's build outputs?", answers: [
+                                "The build output file of Spring Boot can be a jar.":false,
+                                "The build output file of Spring Boot can be a war.":false,
+                                "For web applications, a war is outputted from Spring Boot so that it can be deployed on standalone servers.":false,
+                                "All are true":true]),
+        
+        Question(text: "The use of this makes it easier to mock and/or test Java classes.", answers: [
+                                       "Spring AOP":false,
+                                       "Java interfaces":true,
+                                       "Template Design Pattern":false,
+                                       "Spring Expression Language (SpEL)":false]),
+
+        Question(text: "Which of these can be used in loading a root application context in a web application?", answers: [
+                                              "BeanFactoryPostProcessor":false,
+                                              "WebApplicationContext":false,
+                                              "DispatcherServlet":false,
+                                              "ContextLoaderListener":true]),
+
+        Question(text: "In Spring MVC, it is usually prepared inside controller methods, and carries information the view needs to create the view output.", answers: [
+            "model":true,
+            "request parameters":false,
+            "theme":false,
+            "locale":false]),
+    
+        Question(text: "Which of these is the order of the database system isolation levels, from lowest to the highest?", answers: [
+            "Read uncommitted, Repeatable reads, Serializable, Read committed":false,
+            "Read committed, Repeatable reads, Serializable, Read uncommitted":false,
+            "Read uncommitted, Read committed, Repeatable reads, Serializable":true,
+            "Repeatable reads, Read uncommitted, Read committed, Serializable":false]),
+        
+        Question(text: "Which of these design patterns is Spring's JdbcTemplate based on?", answers: [
+            "Command":false,
+            "State":false,
+            "Template":true,
+            "Strategy":false]),
+        
+        Question(text: "What is an Aspect?", answers: [
+            "A module that encapsulate pointcuts and advice":true,
+            "An expression that selects on or more join point":false,
+            "Code to be executed at each selected join point":false,
+            "Technique by which aspect are combined with main code.":false]),
+       
+        
+        Question(text: "During which phase can BeanPostProcessor modify the bean initialization?", answers: [
+                   "BeforeInit":false,
+                   "AfterInit":false,
+                   "Postconstruct":false,
+                   "BeforeInit & AfterInit":true]),
+        
+        Question(text: "@SpringBootApplication is equivalent to which annotation?", answers: [
+                          "@Configuration, @ComponentScan, @EnableAutoConfiguration":true,
+                          "@SpringBootConfiguration, @ComponentScan, @EnableAutoConfiguration":false,
+                          "@EnableJpaReposorities, @ComponentScan, @EnableAutoConfiguration, @Configuration":false,
+                          "None of these":false]),
+      
+        Question(text: "When a bean is not associated to the profile using @Profile:", answers: [
+            "The bean is available on each profile":true,
+            "The bean is only available on default profile":false,
+            "The bean must be implicitly associated to the profile using @Profile":false,
+            "None of these":false]),
+        
+        
+        Question(text: "Spring application contexts can be bootstrapped in:", answers: [
+                   "JUnit system test":false,
+                   "Web Application":false,
+                   "Standalone application":false,
+                   "All of these":true]),
+        
+        Question(text: "How can you create an application context from multiple files, which annotation can you used to combined multiple configuration files?", answers: [
+                          "@Import(A.class, B.class)":false,
+                          "@Include(A.class, B.class)":false,
+                          "@Imports(A.class, B.class)":false,
+                          "@Import({A.class, B.class})":true]),
+       
+        Question(text: "Which statement is invalid for the destruction phase of Spring bean lifecycle?", answers: [
+            "Any registered @PreDestroy method are invoked":false,
+            "Beans released for the garbage collector to destroy":false,
+            "It will only call the @PreDestroy method when the application is killed.":true,
+            "All are valid":false]),
+        
+        Question(text:
+"""
+________  expresses the usage of an EntityManager and its associated persistence context.
+This is also the annotation in the blank in the code below.
+________
+private EntityManager entityManager;
+"""
+            ,answers: [
+                   "@PersistenceUnit":false,
+                   "@PersistenceContext":true,
+                   "@EntityManagerResource":false,
+                   "@Entity":false]),
+      
+        Question(text: "Which of these is the JdbcTemplate callback interface described below? It extracts values from each row of a ResultSet.", answers: [
+                   "PreparedStatementCreator":false,
+                   "CallableStatementCreator":false,
+                   "RowCallbackHandler":true,
+                   "None of these":false]),
+        
+        Question(text: "Which of these can enable support for Spring Security's @Secured?", answers: [
+            "<secured-annotations/>":false,
+            "<method-security/>":false,
+            "<global-method-security secured-annotations=\"enabled\" />":true,
+            "It is enabled by default.  No additional declaration is needed to enable it.":false]),
+        
+        Question(text: "Which of these are true about Spring MVC view resolvers  (implementations of the ViewResolver interface)?", answers: [
+                   "They are actual servlets (it inherits from the HttpServlet base class).":false,
+                   "They resolve themes for the web application to have features like personalized layouts.":false,
+                   "They resolve logical String-based view names to actual View types.":true,
+                   "They map exceptions to views.":false]),
+        
+        Question(text: "It can be declared in the web.xml.  It provides the link between the web.xml and the application context.  It delegates its Filter methods to beans.", answers: [
+            "DispatcherServlet":false,
+            "Filter":false,
+            "FilterChainProxy":false,
+            "DelegatingFilterProxy":true]),
+      
+        Question(text: "In Spring security, which of these is the attribute of the 'intercept-url' element which is a comma-separated list of the security configuration attributes (such as role names)?", answers: [
+                  "pattern":false,
+                  "filters":false,
+                  "access":true,
+                  "requires-channel":false]),
+        
+        Question(text: "Martin Fowler came up with the name Dependency Injection, to rename which principle?", answers: [
+                        "Abstract Factory Design":false,
+                        "Inversion of Control":true,
+                        "Configuration Management":false,
+                        "CGLIB-based Method Injection":false]),
+    
+        Question(text:
+"""
+Which of these can be used so that the @Transactional in the code below will work?
+
+  @Transactional
+  public class MyServiceImpl implements MyService {}
+"""
+            ,answers: [
+        "@EnableTransaction":false,
+        "@TransactionAnnotationDriven":false,
+        "@EnableTransactionManagement":true,
+        "None. It will work as is, and without any additional configuration.":false]),
+    
+        Question(text: "Which application factor does inversion of control help lessen?", answers: [
+                             "Dependency":true,
+                             "Redundant Processing":false,
+                             "Limitations brought by waterfall sequential design process":false,
+                             "Runtime locking and deadlock issues":false]),
+        
+        Question(text: "What does the @EnableAspectJAutoProxy do?", answers: [
+                                    "Enables Spring AOP":false,
+                                    "Enables @AspectJ support":true,
+                                    "There is no @EnableAspectJAutoProxy annotation":false,
+                                    "None of these":false]),
+        
+        Question(text: "Which of these is true regarding Spring transactions?", answers: [
+                                           "@Transactional annotation works only on public methods":false,
+                                           "@Transactional annotation on an interface (or an interface method) only works if you are using class-based proxies.":false,
+                                           "@Transactional annotation's default propagation type is PROPAGATION_REQUIRED":true,
+                                           "All of these":false]),
+      
+        Question(text: "It is a stereotype annotation that is itself annotated with @Controller and @ResponseBody.  As compared to controllers, classes that are annotated with this, have their @RequestMapping methods assume @ResponseBody semantics by default.", answers: [
+                                          "@RestComponent":false,
+                                          "@RestController":true,
+                                          "@ResponseBodyController":false,
+                                          "@ResponseBodyComponent":false]),
+      
+        Question(text: "In Spring MVC, some of the values returned by _____________ are:  a String, a View, or a ModelAndView.", answers: [
+                                                 "View Resolvers methods":false,
+                                                 "HandlerMapping methods":false,
+                                                 "Controller handler methods":true,
+                                                 "Model methods":false]),
+      
+        Question(text:
+"""
+Which of these can fill the blank below, to protect access to '/driver'?
+
+    protected configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()._______________("/driver").hasRole("DRIVER");
+    }
+"""
+            ,answers: [
+                "withUrl":false,
+                "on":false,
+                "match":false,
+                "mvcMatchers":true]),
+    
+        Question(text: "The ____________ is the central interface within a Spring application for providing configuration information to the application. It is read-only at run time, but can be reloaded if necessary and supported by the application. A number of classes implement the ____________ interface, allowing for a variety of configuration options and types of applications.", answers: [
+            "@Configuration":false,
+            "ApplicationContext":true,
+            "Bean":false,
+            "ConnectionFactory":false]),
+        
+        
+        Question(text:
+"""
+________ can be extended to create a repository.  Below is a way to activate it.
+
+@Configuration
+________  (basePackages="myPackage.myInstantRepos")
+public class MyInstantRepoConfiguration {}
+"""
+            , answers: [
+               "JpaRepository, @EnableJpaRepositories":true,
+               "JpaTemplate, @EnableJpaRepositories":false,
+               "JpaTemplate, @EnableJpaRepository":false,
+               "JpaTemplate, @EnableSpringRepositories":false]),
+      
+        Question(text: "______ in a class annotated with ______ enables MVC Java config.", answers: [
+        "@EnableMVC, @Configuration":false,
+        "@EnableMVC, @WebConfiguration":false,
+        "@EnableWebMVC, @WebConfiguration":false,
+        "@EnableWebMVC, @Configuration":true]),
+        
+        Question(text: "Which of these is true about bean scopes?", answers: [
+               "These scopes are supported out of the box:  singleton, prototype, request, session, application, websocket.":true,
+               "The default scope is prototype.":false,
+               "You can override the default scope with the @BeanScope annotation.":false,
+               "You can override the default scope with the 'scope' attribute of the @Bean annotation.":false]),
+        
+        Question(text: "In Spring Security, which of these is true?", answers: [
+                      "<filter-chain> is used to set up security filter chains.  It includes an attribute where you can specify the filters that you prefer to use.":false,
+                      "FilterChainProxy implements Java Filter interface":false,
+                      "<intercept-url> can be used to define URL patterns and how they should be handled":false,
+                      "All of these":true]),
+        
+        Question(text: "________ is an implementation of ________ for a single JPA EntityManagerFactory. It binds a JPA EntityManager from the mentioned factory to the thread.", answers: [
+                     "JpaTemplate, Template":false,
+                     "JpaTransactionManager, PlatformTransactionManager":true,
+                     "JpaDataSource, DataSource":false,
+                     "JpaEntity, Entity":false]),
+        
+        Question(text: "This is a predicate that matches join points.  The concept of join points as matched by expressions of this kind is central to AOP.", answers: [
+                            "Aspect":false,
+                            "Pointcut":true,
+                            "Advice":false,
+                            "None of these":false]),
+    
     ]
     
     var previouslyUsedNumbers: [Int] = []
