@@ -304,6 +304,37 @@ Which of these can be added after the code below to assist in the definition?
             "HandlerMapping":true,
             "RequestHandler":false,
             "FlashMapManager":false]),
+        
+        Question(text: "It is described as a modularization of a concern that cuts across multiple classes or across an entire application.", answers: [
+            "Aspect":true,
+            "Framework":false,
+            "Service-Oriented Architecture":false,
+            "Subclassing or Java Inheritance":false]),
+    
+        Question(text: "Objects passed to and returned from RestTemplate methods are converted to and from HTTP messages by this.", answers: [
+                  "MessageConverter":false,
+                  "MessagePropertyEditor":false,
+                  "HttpMessageConverter":true,
+                  "HttpMessagePropertyEditor":false]),
+        
+        Question(text: "Which of these dispatches requests to controllers?", answers: [
+            "ViewResolver":false,
+            "RequestDispatcher":false,
+            "DispatcherServlet":true,
+            "FlashMapManager":false]),
+        
+        Question(text: "Which of these is a method used in customizing bean lifecycles, and is found inside the InitializingBean interface?", answers: [
+            "postConstruct()":false,
+            "afterPropertiesSet()":true,
+            "init()":false,
+            "onInit()":false]),
+        
+        Question(text: "Which of these annotations, determine if a bean is registered or not, based on this annotation's value?", answers: [
+            "@BeansProfile":false,
+            "@Profile":true,
+            "@BeanProfile":false,
+            "@Config":false]),
+
     ]
     
     var previouslyUsedNumbers: [Int] = []
