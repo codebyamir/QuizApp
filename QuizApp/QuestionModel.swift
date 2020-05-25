@@ -75,9 +75,12 @@ struct QuestionModel {
             "postConstruct()":false,
             "afterPropertiesSet()":false,
             "destroy()":true,
-            "onInit()":true]),
+            "onInit()":false]),
         
-        Question(text: "Which of these is a valid way of configuring the ContextLoaderListener?", answers: ["<servlet-class>org.springframework.web.context.ContextLoaderListener</servlet-class>":false,"<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>":true,"<param-name>org.springframework.web.context.ContextLoaderListener</param-name>":false,"<bean name=\"root\" class=\"org.springframework.web.context.ContextLoaderListener\">":false]),
+        Question(text: "Which of these is a valid way of configuring the ContextLoaderListener?", answers: [
+            "<servlet-class>org.springframework.web.context.ContextLoaderListener</servlet-class>":false,
+"<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>":true,
+"<param-name>org.springframework.web.context.ContextLoaderListener</param-name>":false,"<bean name=\"root\" class=\"org.springframework.web.context.ContextLoaderListener\">":false]),
         
         Question(text: "Which one is true about lazy initialization of beans?", answers: [
             "When a lazy-initialized bean A is a dependency of non-lazy-initialized singleton bean B, bean A will still be lazy-initialized.":false,
@@ -625,6 +628,101 @@ public class MyInstantRepoConfiguration {}
                             "Pointcut":true,
                             "Advice":false,
                             "None of these":false]),
+    
+        Question(text:
+"""
+Which of these is true regarding the code below?
+<bean id="myBean" class="org.MyBean">
+     <property name="person" value="john"/>
+     <property name="age" value="10"/>
+     <property name="project" value="project1"/>
+</bean>
+"""
+                , answers: [
+                    "There must be a bean named 'john' in the container.":false,
+                    "If the class has a property named 'age', and it is an 'int', it will be populated with the value 10.":true,
+                    "There must be a bean named 'project1' in the container.":false,
+                    "All of these":false]),
+    
+        Question(text: "Which ones are true in relation to the @Qualifier annotation?", answers: [
+            "When @Qualifier is specified, the container will autowire the annotated variable, whether @Autowired is specified or not.":false,
+            "The bean name is considered a default qualifier value.":true,
+            "@Qualifier annotations applied on collections  (e.g. Set) are ignored.":false,
+            "Custom qualifier annotations are built using Spring's @Qualifier.  JSR 330's @Qualifier cannot be used.":false]),
+        
+        Question(text: "Which of these is true about scopes?", answers: [
+        "When the 'singleInstance' attribute is set to 'false', singleton scoped beans can have more than one object instance per container.":false,
+        "The 'request' scope is valid only in a web-aware Spring ApplicationContext.  Each HTTP request will have up to 1 object instance of the concerned bean in this scope.":true,
+        "If a bean is in 'session' scope, there will be only 1 object instance of this bean in the Spring IoC container.":false,
+        "None of these":false]),
+        
+        Question(text: "Which of these is true about Spring AOP?", answers: [
+               "@AspectJ support can be enabled using @EnableAspectJ annotation":false,
+               "It is not possible to have @AspectJ support if you are using DTD instead of schema Spring configuration style.":false,
+               "To work with @AspectJ, the following jar must be in the classpath:  aspectjweaver.jar.":true,
+               "All of these":false]),
+        
+        Question(text: "Which of these is true regarding Spring AOP CGLIB proxying?", answers: [
+                      "'final' methods cannot be advised":true,
+                      "In addition to the spring-core jar, the CGLIB jar is needed to be added on the classpath":false,
+                      "proxy-target-class=\"cglib\" forces the use of CGLIB":false,
+                      "None of these":false]),
+    
+        Question(text: "This activity is the linking of aspects with other application types or objects to create an advised object.  Spring AOP performs this at runtime.", answers: [
+                            "Dependency Injection":false,
+                            "Spring configuration validation":false,
+                            "Autowiring":false,
+                            "Weaving":true]),
+        
+        Question(text: "Which of these classes assist in programmatic transaction demarcation and transaction exception handling? It executes codes within a transaction using the TransactionCallback interface.", answers: [
+            "TransactionInterceptor":false,
+            "TransactionTemplate":true,
+            "TransactionStatus":false,
+            "PlatformTransactionManager":false]),
+        
+        Question(text: "The application server manages ________ through the JTA.  ________ cannot work across multiple transactional resources. In the past, a common way to use ________ was through EJB CMT (Container Managed Transaction).", answers: [
+            "global transactions, local transactions, local transactions":false,
+            "local transactions, local transactions, global transactions":false,
+            "global transactions, local transactions, global transactions":true,
+            "local transactions, global transactions, local transactions":false]),
+        
+        Question(text: "In Spring Web, this is can be used to have the request body read and deserialized into an Object through an HttpMessageConverter.", answers: [
+                   "@ResponseBody":false,
+                   "@RequestBody":true,
+                   "@RequestMapping":false,
+                   "@RequestMethod":false]),
+        
+        Question(text: "In Spring security, which of these is the attribute of the 'intercept-url' element which can cause any matching request to bypass the filter chain entirely?", answers: [
+                          "pattern":false,
+                          "filters":true,
+                          "access":false,
+                          "requires-channel":false]),
+    
+        Question(text: "Which of these show a proper ordering of Spring Security filters?", answers: [
+            "ChannelProcessingFilter, FilterSecurityInterceptor, SecurityContextPersistenceFilter":false,
+            "ExceptionTranslationFilter, RememberMeAuthenticationFilter, ChannelProcessingFilter":false,
+            "BasicAuthenticationFilter, AnonymousAuthenticationFilter, FilterSecurityInterceptor":true,
+            "RememberMeAuthenticationFilter, UsernamePasswordAuthenticationFilter, ChannelProcessingFilter":false]),
+      
+        Question(text: "______ and ______ can be used to secure service layer ______.", answers: [
+                  "@Secure, @Authorize, classes":false,
+                  "@Secured, @PreAuthorize, methods":true,
+                  "@Secure, @Authorize, methods":false,
+                  "@Secure, @PreAuthorize, classes":false]),
+       
+        Question(text: "Which of these is true about AOP and Spring AOP?", answers: [
+            "AOP helps unrelated codes be kept outside of the advised classes.":false,
+            "AOP helps code be written once, reused, and not duplicated in many places.":false,
+            "Spring AOP can be configured in two ways:  by XML and by annotations.":false,
+            "All of the above":true]),
+        
+        Question(text: "An instance of it is associated with a persistence context.  It is an API that has methods for interacting with the persistence context, such as persist, update, delete, etc.", answers: [
+                   "PersistenceUnit":false,
+                   "PersistenceContext":false,
+                   "EntityManager":true,
+                   "Entity":false]),
+       
+
     
     ]
     
