@@ -714,7 +714,7 @@ Which of these is true regarding the code below?
             "AOP helps unrelated codes be kept outside of the advised classes.":false,
             "AOP helps code be written once, reused, and not duplicated in many places.":false,
             "Spring AOP can be configured in two ways:  by XML and by annotations.":false,
-            "All of the above":true]),
+            "All of these":true]),
         
         Question(text: "An instance of it is associated with a persistence context.  It is an API that has methods for interacting with the persistence context, such as persist, update, delete, etc.", answers: [
                    "PersistenceUnit":false,
@@ -722,8 +722,89 @@ Which of these is true regarding the code below?
                    "EntityManager":true,
                    "Entity":false]),
        
-
+        Question(text: "Which of these is true about Spring AOP?", answers: [
+            "AspectJ support can be enabled using @EnableAspectJ as shown below:\n@Configuration\n@EnableAspectJ\npublic class MyAppConfig{}":false,
+            "It is not possible to have @AspectJ support if you are using DTD instead of schema Spring configuration style.":false,
+            "To work with @AspectJ, the following jar must be in the classpath:  aspectjweaver.jar.":true,
+            "All of these":false]),
+        
+        Question(text: "Which of these is an object created by the Spring AOP framework  (using CGLIB or JDK) in order to implement the aspect contracts (e.g. advise method executions)?", answers: [
+                          "BeanPostProcessor":false,
+                          "BeanFactory":false,
+                          "Introduction":false,
+                          "AOP proxy":true]),
+      
+        Question(text: "The ______ provides the representation to the user.  It gets the information from the ______.  The third component, the ______,can inform the other 2 MVC parts to update their state  (data store or representation).", answers: [
+                                 "controller, model, view":false,
+                                 "model, view, controller":false,
+                                 "view, model, controller":true,
+                                 "model, controller, view":false]),
     
+        
+        Question(text: "This can be annotated on methods.  This indicates that the return value should be written straight to the web response body (and not into a Model, or as a view name).", answers: [
+                                       "@RequestBody":false,
+                                       "@RequestMapping":false,
+                                       "@ResponseBody":true,
+                                       "@RequestMethod":false]),
+        
+        Question(text: "Which of these are true about working with REST in Spring?", answers: [
+            "@RestController is used on the client side, not the server side.":false,
+            "RestTemplate is used on the server side, not the client side.":false,
+            "Spring MVC binaries are needed in the classpath when using @RestController.":true,
+            "REST usually uses the Rest protocol, instead of the HTTP protocol.":false]),
+        
+        Question(text: "Which of these is true when working with the following:  SpringJUnit4ClassRunner, @Test and @Transactional?", answers: [
+                   "The default rollback policy is false.":false,
+                   "@Default can set the class' default rollback policy.":false,
+                   "The TestContext framework can be instructed to cause the transaction to commit instead of roll back via the @Commit annotation.":true,
+                   "All of these":false]),
+
+        Question(text: "Inside a class annotated with @Configuration, methods annotated with this annotation must not be final.", answers: [
+            "@Bean":true,
+            "@Scope":false,
+            "@Import":false,
+            "@Profile":false]),
+
+        Question(text: "Which of these are true about AOP proxies?", answers: [
+            "Spring AOP is proxy-based.":true,
+            "Spring AOP can use either CGLIB or JDK dynamic proxies on target objects that does not implement any interface.":false,
+            "If the target object implements an interface, it defaults to using the standard JDK dynamic proxies, and can never be overridden to force the use CGLIB instead.":false,
+            "Spring AOP proxies are woven in at compile time.":false]),
+       
+        Question(text: "Which of these statements are true regarding Spring's support for javax.sql.DataSource?", answers: [
+            "Spring obtains a connection to the database through a DataSource.":true,
+            "DriverManagerDataSource performs well in a multiple-request production environment.":false,
+            "SingleConnectionDataSource is multi-threading capable.":false,
+            "DriverManagerDataSource provides pooling.":false]),
+      
+
+        Question(text:
+"""
+______(value=HttpStatus.NOT_FOUND, reason="Not Found")
+public class MyException extends RuntimeException {}
+
+Taking into consideration the code above, when a MyException is thrown, ______ is the HTTP code returned to the client.
+"""
+            , answers: [
+            "@ResponseStatus, 404":true,
+            "@HttpResponseStatus, 404":false,
+            "@HttpResponseStatus, 500":false,
+            "@ResponseStatus, 500":false]),
+        
+        
+        Question(text: "Example settings of it includes the following:  required, requires new, etc.", answers: [
+            "transaction manager":false,
+            "transaction propagation":true,
+            "isolation level":false,
+            "transaction proxy":false]),
+
+        Question(text: "Which of these are true about @Query in Spring Data? ", answers: [
+                   "Queries defined using @NamedQuery will take precedence over queries annotated to the query method using @Query.":false,
+                   "The @Query annotation allows to execute native queries by setting the 'native' flag to true.":false,
+                   "The execution of pagination or dynamic sorting for native queries is not supported.":true,
+                   "Named queries declared in orm.xml will take precedence over queries annotated to the query method using @Query.":false]),
+        
+      
     ]
     
     var previouslyUsedNumbers: [Int] = []
